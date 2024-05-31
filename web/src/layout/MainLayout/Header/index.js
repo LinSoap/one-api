@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import { Avatar, Box, ButtonBase } from '@mui/material';
-
+import { Avatar, Box, ButtonBase ,Button} from '@mui/material';
+import { Link,useLocation } from 'react-router-dom';
 // project imports
 import LogoSection from '../LogoSection';
 import ProfileSection from './ProfileSection';
@@ -16,7 +16,7 @@ import { IconMenu2 } from '@tabler/icons-react';
 
 const Header = ({ handleLeftDrawerToggle }) => {
   const theme = useTheme();
-
+  const { pathname } = useLocation();
   return (
     <>
       {/* logo & toggler button */}
@@ -56,6 +56,9 @@ const Header = ({ handleLeftDrawerToggle }) => {
       <Box sx={{ flexGrow: 1 }} />
       <Box sx={{ flexGrow: 1 }} />
       <ThemeButton />
+      <Button component={Link} variant="text" to="/playground" color={pathname === '/playground' ? 'primary' : 'inherit'}>
+                交互
+              </Button>
       <ProfileSection />
     </>
   );

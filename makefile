@@ -1,7 +1,7 @@
 NAME=one-api
 DISTDIR=dist
 WEBDIR=web
-VERSION=$(shell git describe --tags || echo "dev")
+VERSION=$(shell  echo "dev")
 GOBUILD=go build -ldflags "-s -w -X 'one-api/common.Version=$(VERSION)'"
 
 all: one-api

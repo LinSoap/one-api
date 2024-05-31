@@ -70,7 +70,7 @@ const Playground = () => {
         server = window.location.host;
       }
       server = encodeURIComponent(server);
-      const key = 'sk-' + value;
+      const key =  value;
 
       setIframeSrc(replaceChatPlaceholders(chatLinks[newIndex].url, key, server));
     },

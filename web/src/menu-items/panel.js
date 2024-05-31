@@ -78,14 +78,6 @@ const panel = {
       breadcrumbs: false
     },
     {
-      id: 'playground',
-      title: 'Playground',
-      type: 'item',
-      url: '/panel/playground',
-      icon: icons.IconBallFootball,
-      breadcrumbs: false
-    },
-    {
       id: 'log',
       title: '日志',
       type: 'item',
@@ -116,7 +108,8 @@ const panel = {
       type: 'item',
       url: '/panel/midjourney',
       icon: icons.IconBrush,
-      breadcrumbs: false
+      breadcrumbs: false,
+      isAdmin: true
     },
     {
       id: 'user',
